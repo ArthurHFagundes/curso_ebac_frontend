@@ -1,16 +1,44 @@
-*
+* /* SELECIONAR TODOS OS ELEMENTOS */
 {
-    box-sizing: border-box; 
-    margin: 0; 
+    box-sizing: border-box; /* RESPEITAR AS LIMITAÇÕES */
+    margin: 5px; 
     padding: 0;
 }
 
-header li
+header li /* PARA SE ALINHAR COM O TEXTO */
 {
     display:inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 16px;
 }
 
-.container
+header li a
+{
+    color:#fff;
+    text-decoration: none; 
+}
+
+body > header /* O "header" DIRETAMENTE DEPOIS DE "body" */
+{
+    background-color: red;
+    padding: 16px 0;
+}
+
+header .container /* SE ALINHAR NA HORIZONTAL */
+{
+    display: flex;
+    align-items: center; /* ALINHAR AO CENTRO DA TAG */
+    justify-content: space-around;
+}
+
+h1
+{
+    color:#fff;
+    font-weight: bold;
+}
+
+.container /* PARA OS EMELEMENTOS SE AJUSTAREM AO DISPLAY DO DISPOSITIVO */
 {
     width: 1366px;
     margin: 0px auto;
@@ -18,17 +46,101 @@ header li
 
 .articles
 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex; /* HORIZONTAL */
+    flex-wrap: wrap; /* ACABA A TELA, VAI EMBAIXO */
+    justify-content: space-between; /* ESPAÇAMENTO ENTRE OS ELEMENTOS */
 }
 
 .articles article img
 {
-    height: 180px
+    /*height: 180px;*/
+    width: 100%;
 }
 
 .articles article
 {
     width: 30%;
+}
+
+section
+{
+    padding: 16px 0;
+}
+
+section h2, .articles article
+{
+    margin-bottom: 16px; /* MARGEM ABAIXO */
+}
+
+.articles article h3 /* TÍTULO DAS MATÉRIAS */
+{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.articles article a /* BOTÃO LER MAIS */
+{
+    background-color: brown;
+    color:#fff;
+    padding: 8px;
+    display: inline-block; /* CAIXA ALINHADA */
+    text-decoration: none; /* REMOVER O UNDERLINE DO LINK */
+    font-weight: bold; /* DEIXA EM NEGRITO */ /* MESMO QUE 700 */
+    margin-top: 8px;
+}
+
+.articles article a:hover /* QUANDO O MOUSE PASSAR POR CIMA APARECE A UNDERLINE */ /* PARA ESPECIFICAR UM ESTADO DO ELEMENTO ":" */
+{
+    text-decoration: underline; 
+}
+
+.articles article p, .articles article a
+{
+    font-family: Arial, Helvetica, sans-serif; /* FONTES QUE VAI TESTAR */
+}
+
+section h2
+{
+    font-size: 32px;
+}
+
+#sports
+{
+    background-color: rgba(0, 255, 0, 0.10); /* rgba(RED, GREEN, BLUE, TRANSPARÊNCIA) */
+}
+
+#sports .articles article a
+{
+    background-color:forestgreen;
+}
+/*! ESPORTES & ECONOMIA */
+#economy
+{
+    background-color: rgba(255, 238, 0, 0.1); 
+}
+
+#economy .articles article a
+{
+    background-color:darkgoldenrod;
+}
+/*! ECONOMIA & ENTRETENIMENTO */
+#entertainment
+{
+    background-color: rgba(231, 12, 67, 0.1); 
+}
+
+#entertainment .articles article a
+{
+    background-color:deeppink;
+}
+/*! ENTRETENIMENTO & TECNOLOGIA */
+#tech
+{
+    background-color: rgba(162, 12, 231, 0.1); 
+}
+
+#tech .articles article a
+{
+    background-color:midnightblue;
 }
